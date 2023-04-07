@@ -1,0 +1,239 @@
+{
+  "size": 108,
+  "tiles": [
+    {
+      "image": "ocean.png",
+      "sockets": [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]
+      ]
+    },
+    {
+      "image": "sand.png",
+      "sockets": [
+        [1, 1, 1],
+        [1, 1, 1],
+        [1, 1, 1],
+        [1, 1, 1]
+      ]
+    },
+    {
+      "image": "beach.png",
+      "sockets": [
+        [0, 1, 1],
+        [1, 1, 1],
+        [1, 1, 0],
+        [0, 0, 0]
+      ]
+    },
+    {
+      "image": "beach1.png",
+      "sockets": [
+        [0, 0, 0],
+        [0, 1, 1],
+        [1, 1, 1],
+        [1, 1, 0]
+      ]
+    },
+    {
+      "image": "beach2.png",
+      "sockets": [
+        [1, 1, 0],
+        [0, 0, 0],
+        [0, 1, 1],
+        [1, 1, 1]
+      ]
+    },
+    {
+      "image": "beach3.png",
+      "sockets": [
+        [1, 1, 1],
+        [1, 1, 0],
+        [0, 0, 0],
+        [0, 1, 1]
+      ]
+    },
+    {
+      "image": "beachcorner.png",
+      "sockets": [
+        [0, 0, 0],
+        [0, 0, 1],
+        [1, 1, 0],
+        [0, 0, 0]
+      ]
+    },
+    {
+      "image": "beachcorner1.png",
+      "sockets": [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 1],
+        [1, 1, 0]
+      ]
+    },
+    {
+      "image": "beachcorner2.png",
+      "sockets": [
+        [1, 1, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 1]
+      ]
+    },
+    {
+      "image": "beachcorner3.png",
+      "sockets": [
+        [0, 0, 1],
+        [1, 1, 0],
+        [0, 0, 0],
+        [0, 0, 0]
+      ]
+    },
+    {
+      "image": "beachcornerl.png",
+      "sockets": [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 1, 1],
+        [1, 0, 0]
+      ]
+    },
+    {
+      "image": "beachcornerl1.png",
+      "sockets": [
+        [1, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 1, 1]
+      ]
+    },
+    {
+      "image": "beachcornerl2.png",
+      "sockets": [
+        [0, 1, 1],
+        [1, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]
+      ]
+    },
+    {
+      "image": "beachcornerl3.png",
+      "sockets": [
+        [0, 0, 0],
+        [0, 1, 1],
+        [1, 0, 0],
+        [0, 0, 0]
+      ]
+    },
+    {
+      "image": "beachedge.png",
+      "sockets": [
+        [0, 0, 0],
+        [0, 0, 1],
+        [1, 1, 1],
+        [1, 0, 0]
+      ]
+    },
+    {
+      "image": "beachedge1.png",
+      "sockets": [
+        [1, 0, 0],
+        [0, 0, 0],
+        [0, 0, 1],
+        [1, 1, 1]
+      ]
+    },
+    {
+      "image": "beachedge2.png",
+      "sockets": [
+        [1, 1, 1],
+        [1, 0, 0],
+        [0, 0, 0],
+        [0, 0, 1]
+      ]
+    },
+    {
+      "image": "beachedge3.png",
+      "sockets": [
+        [0, 0, 1],
+        [1, 1, 1],
+        [1, 0, 0],
+        [0, 0, 0]
+      ]
+    },
+    {
+      "image": "beachslopel.png",
+      "sockets": [
+        [1, 0, 0],
+        [0, 0, 0],
+        [0, 1, 1],
+        [1, 1, 1]
+      ]
+    },
+    {
+      "image": "beachslopel1.png",
+      "sockets": [
+        [1, 1, 1],
+        [1, 0, 0],
+        [0, 0, 0],
+        [0, 1, 1]
+      ]
+    },
+    {
+      "image": "beachslopel2.png",
+      "sockets": [
+        [0, 1, 1],
+        [1, 1, 1],
+        [1, 0, 0],
+        [0, 0, 0]
+      ]
+    },
+    {
+      "image": "beachslopel3.png",
+      "sockets": [
+        [0, 0, 0],
+        [0, 1, 1],
+        [1, 1, 1],
+        [1, 0, 0]
+      ]
+    },
+    {
+      "image": "beachsloper.png",
+      "sockets": [
+        [0, 0, 1],
+        [1, 1, 1],
+        [1, 1, 0],
+        [0, 0, 0]
+      ]
+    },
+    {
+      "image": "beachsloper1.png",
+      "sockets": [
+        [0, 0, 0],
+        [0, 0, 1],
+        [1, 1, 1],
+        [1, 1, 0]
+      ]
+    },
+    {
+      "image": "beachsloper2.png",
+      "sockets": [
+        [1, 1, 0],
+        [0, 0, 0],
+        [0, 0, 1],
+        [1, 1, 1]
+      ]
+    },
+    {
+      "image": "beachsloper3.png",
+      "sockets": [
+        [1, 1, 1],
+        [1, 1, 0],
+        [0, 0, 0],
+        [0, 0, 1]
+      ]
+    }
+  ]
+}
