@@ -41,7 +41,7 @@ const DEFAULT_HEIGHT = 10;
 const DEFAULT_FRAMERATE = null;
 const DEFAULT_TINT = false;
 
-export class WFC {
+export class Model {
   instance: p5;
   tint?: boolean | Parameters<p5["tint"]>;
 
@@ -58,6 +58,16 @@ export class WFC {
       const w = tileset.size * simOptions.width;
       const h = tileset.size * simOptions.height;
       let grid: Grid;
+      const images: Map<string, p5.Image> = new Map();
+
+      sketch.preload = () => {
+        tileset.tiles.forEach((config) => {
+          images.set(
+            config.image,
+            sketch.loadImage(`../tilesets/${SET}/${config.image}`)
+          );
+        });
+      };
 
       sketch.setup = () => {
         if (simOptions.seed) {
@@ -91,7 +101,7 @@ export class WFC {
         } else {
           grid.step();
         }
-        grid.draw();
+        grid.draw(images);
       };
 
       sketch.keyPressed = (e: KeyboardEvent) => {
@@ -112,7 +122,7 @@ export class WFC {
 class Cell {
   #instance: p5;
   #possibilities: Set<TileConfig>;
-  #image?: p5.Image;
+  #image?: string;
 
   constructor(instance: p5, tileset: Tileset) {
     this.#instance = instance;
@@ -163,9 +173,8 @@ class Cell {
 
     if (!this.#image) {
       const [config] = [...this.#possibilities];
-      this.#image = this.#instance.loadImage(
-        `../tilesets/${SET}/${config.image}`
-      );
+      this.#image = config.image;
+      return config.image;
     }
 
     return this.#image!;
@@ -270,13 +279,12 @@ class Grid {
     return this.#cells[y][x];
   }
 
-  draw(buff?: p5.Graphics) {
-    const canvas = buff ?? this.#instance;
+  draw(assets: Map<string, p5.Image>) {
     this.#cells.forEach((row, y) => {
       row.forEach((cell, x) => {
         if (!cell.isCollapsed()) return;
-        canvas.image(
-          cell.image(),
+        this.#instance.image(
+          assets.get(cell.image())!,
           x * this.#tileset.size,
           y * this.#tileset.size
         );
