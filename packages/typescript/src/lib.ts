@@ -1,7 +1,5 @@
 import p5 from "p5";
 
-const SET = "outdoor-sprite-full";
-
 enum Edge {
   TOP,
   RIGHT,
@@ -19,6 +17,7 @@ export type TileConfig = {
 };
 
 export type Tileset = {
+  path: string;
   size: number;
   tiles: TileConfig[];
   sprites?: never;
@@ -32,6 +31,7 @@ export type SpriteConfig = {
 };
 
 export type Spritesheet = {
+  path: string;
   size: number;
   image: string;
   sprites: SpriteConfig[];
@@ -83,14 +83,14 @@ class TileModel {
       tileset.tiles.forEach((config) => {
         this.#images.set(
           config.image,
-          instance.loadImage(`../tilesets/${SET}/${config.image}`)
+          instance.loadImage(`${tileset.path}/${config.image}`)
         );
       });
     } else {
       this.#spritesheet = tileset;
       this.#images.set(
         tileset.image,
-        instance.loadImage(`../tilesets/${SET}/${tileset.image}`)
+        instance.loadImage(`${tileset.path}/${tileset.image}`)
       );
     }
   }
@@ -174,7 +174,7 @@ export class Model {
       };
 
       sketch.draw = () => {
-        sketch.background(190, 120, 12);
+        // sketch.background(190, 120, 12);
         if (grid.finished) {
           sketch.noLoop();
         } else {
@@ -200,13 +200,11 @@ export class Model {
 
 class Cell {
   #instance: p5;
-  #tileModel: TileModel;
   #possibilities: Set<Tile>;
   #tile?: Tile;
 
   constructor(instance: p5, tileModel: TileModel) {
     this.#instance = instance;
-    this.#tileModel = tileModel;
     this.#possibilities = new Set([...tileModel.tiles]);
   }
 
@@ -289,7 +287,7 @@ class Grid {
     this.propagate({ x, y, cell: initial });
   }
 
-  propagate(entry: Entry) {
+  propagate(_entry: Entry) {
     // TODO: propagate from entry rather than iterating entire grid
 
     let constrained;
